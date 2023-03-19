@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projetorastreio/components/MyBottomNavigationBar.dart';
+import 'package:projetorastreio/components/header.dart';
 
 
 const paddingHorizontal = 30.0;
@@ -22,76 +23,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF4D6FE7),
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color(0xFF4D6FE7),
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
+              HeaderSection(),
               Container(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 100),
-                      Text(
-                        'Bem vindo,',
-                        style: TextStyle(
-                          color: Color(0xCCFFFFFF),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text(
-                        'Encontre seu pacote',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(height: 20,),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.8,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Color(0xFF7B93ED),
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "Número de rastreio",
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(color: Color(0xCCFFFFFF)),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: IconButton(
-                                icon: Icon(Icons.search, color: Color(0xFF4D6FE7)),
-                                onPressed: () {},
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20,),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.60144,
+                height: MediaQuery.of(context).size.height * 0.5999,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),
